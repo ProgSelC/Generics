@@ -15,11 +15,7 @@ public class Main {
 			HashMap<T, Integer> map = new HashMap<T, Integer>();
 			for (T key : a) {
 				if (key != null) {
-					if (map.get(key) == null) {
-						map.put(key, 1);
-					} else {
-						map.put(key, map.get(key) + 1);
-					}
+					map.put(key,map.containsKey(key)?(map.get(key) + 1):1);
 				}
 			}
 
