@@ -14,10 +14,12 @@ public class Main {
 		if (a != null) {
 			HashMap<T, Integer> map = new HashMap<T, Integer>();
 			for (T key : a) {
-				if (map.get(key) == null) {
-					map.put(key, 1);
-				} else {
-					map.put(key, map.get(key) + 1);
+				if (key != null) {
+					if (map.get(key) == null) {
+						map.put(key, 1);
+					} else {
+						map.put(key, map.get(key) + 1);
+					}
 				}
 			}
 
@@ -32,4 +34,3 @@ public class Main {
 	}
 
 }
-
